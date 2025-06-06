@@ -28,6 +28,14 @@ public class Main {
             System.out.print("Pilih Menu: ");
             pilihan = sc.nextInt();
             sc.nextLine();
+            switch (pilihan) {
+                case value:
+                    
+                    break;
+            
+                default:
+                    break;
+            }
         } while (pilihan != 0);
     }
 }
