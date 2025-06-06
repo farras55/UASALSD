@@ -29,8 +29,8 @@ public class Main {
             pilihan = sc.nextInt();
             sc.nextLine();
             switch (pilihan) {
-                case value:
-                    
+                case 1:
+                    kjfkwfw
                     break;
             
                 default:
