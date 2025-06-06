@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-import UASALSD.Pasien;
+
 
 public class Main {
     public static Pasien inputMahasiswa(Scanner sc) {
@@ -30,7 +30,7 @@ public class Main {
             sc.nextLine();
             switch (pilihan) {
                 case 1:
-                    kjfkwfw
+                System.out.println("TESSSS");
                     break;
             
                 default:
