@@ -61,7 +61,7 @@ public class Main {
                 int durasilayanan = sc.nextInt();
                 sc.nextLine();
                 TransaksiLayanan t = new TransaksiLayanan(a, d, durasilayanan);
-                transaksi. tambah(null);
+                transaksi.tambah(t);
                 System.out.println("Pasien Telah Dilayani, Transaksi berhasil dicatat. ");
                 break;
 
