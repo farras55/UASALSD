@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+import UASALSD.TransaksiLayanan;
+
 public class Main {
     public static Pasien inputPasien(Scanner sc) {
         System.out.print("Masukkan Nama Pasien: ");
@@ -12,9 +14,19 @@ public class Main {
         sc.nextLine();
         return new Pasien(nik, nama, keluhan);
     }
+    public static inputDokter(Scanner sc) {
+        System.out.print("Masukkan ID Dokter: ");
+        String idDokter = sc.nextLine();
+        System.out.print("Masukkan Nama Dokter: ");
+        String nama = sc.nextLine();
+        sc.nextLine();
+        return new Dokter(String idDokter, String nama);
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         SslPasien antrian = new SslPasien();
+        Queue transaksi = new Queue(50);
 
         int pilihan;
         do {
@@ -29,6 +41,7 @@ public class Main {
             pilihan = sc.nextInt();
             sc.nextLine();
             switch (pilihan) {
+
                 case 1:
                 Pasien p = inputPasien(sc) ;
                 antrian. tambahPasien(p);
@@ -39,7 +52,21 @@ public class Main {
                 break;
 
                 case 3:
-                Pasien p = 
+                Pasien p = antrian.layaniDanAmbilPasien();
+                if (p == null) {
+                    System.out.println("Antrian Kosong");
+                    break;
+                }
+                System.out.println("Pasien " + p.nama + " dipanggil");
+                Dokter d = inputDokter(sc);
+                System.out.print("Masukkan Durasi Layanan (jam): ");
+                int durasi = sc.nextInt(); sc.nextLine();
+                TransaksiLayanan T = new TransaksiLayanan(p.nama, d, durasi)
+                transaksi. tambah(null);
+                System.out.println("Pasien Telah Dilayani, Transaksi berhasil dicatat. ");
+                break;
+
+                
 
                 default:
                     break;

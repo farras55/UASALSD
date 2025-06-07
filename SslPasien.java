@@ -20,7 +20,7 @@ public class SslPasien {
         System.out.println(">> Pasien masuk ke dalam antrian");
     }
 
-    public Pasien layanDanAmbilPasien () {
+    public Pasien layaniDanAmbilPasien () {
         if (isEmpty()) {
             System.out.println("Antrian kosong.");
         } else {
