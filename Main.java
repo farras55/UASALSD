@@ -65,10 +65,22 @@ public class Main {
                 System.out.println("Pasien Telah Dilayani, Transaksi berhasil dicatat. ");
                 break;
 
+                case 4:
+                int sisa = antrian.hitungSisa();
+                System.out.println("Sisa pasien dalam antrian: " + sisa);
+                break;
 
+                case 5:
+                transaksi.tampil();
+                break;
+
+                case 0:
+                System.out.println("Program Selesai.");
+                break;
 
                 default:
             }
         } while (pilihan != 0);
+        sc.close();
     }
 }
