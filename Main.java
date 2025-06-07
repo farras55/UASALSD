@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Main {
-    public static Pasien inputMahasiswa(Scanner sc) {
+    public static Pasien inputPasien(Scanner sc) {
         System.out.print("Masukkan Nama Pasien: ");
         String nama = sc.nextLine();
         System.out.print("Masukkan NIK: ");
@@ -14,6 +14,8 @@ public class Main {
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        SslPasien antrian = new SslPasien();
+
         int pilihan;
         do {
             System.out.println("\n=== SISTEM ANTRIAN KLINIK ===");
@@ -28,9 +30,17 @@ public class Main {
             sc.nextLine();
             switch (pilihan) {
                 case 1:
-                System.out.println("TESSSS");
+                Pasien p = inputPasien(sc) ;
+                antrian. tambahPasien(p);
                     break;
             
+                case 2:
+                antrian.tampilAntrian();
+                break;
+
+                case 3:
+                Pasien p = 
+
                 default:
                     break;
             }
