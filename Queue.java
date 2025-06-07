@@ -17,7 +17,7 @@ public class Queue {
         max = n;
         data = new TransaksiLayanan[max];
         size = 0;
-        front = rear = -1;
+        front = rear = 0;
     }
     
     public boolean IsEmpty() {
