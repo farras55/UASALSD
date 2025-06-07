@@ -1,3 +1,5 @@
+import UASALSD.Pasien;
+
 public class SslPasien {
     NodePasien head, tail;
     int size;
@@ -18,7 +20,7 @@ public class SslPasien {
         System.out.println(">> Pasien masuk ke dalam antrian");
     }
 
-    public void layaniPasien () {
+    public Pasien layanDanAmbilPasien () {
         if (isEmpty()) {
             System.out.println("Antrian kosong.");
         } else {
@@ -27,10 +29,11 @@ public class SslPasien {
             if (head == null) {
                 tail = null;
             }
+            return p;
         }
     }
 
-    public void tampilAntrian() {
+    public Pasien tampilAntrian() {
         System.out.println();
         if (isEmpty()) {
             System.out.println("Antrian kosong.");
@@ -51,13 +54,5 @@ public class SslPasien {
             current = current.next;
         }
         return sisa;
-    }
-
-    public void lihatDepan() {
-        if (isEmpty()) {
-            System.out.println("Antrian kosong.");
-        } else {
-            head.data.tampilInformasi();
-        }
     }
 }
