@@ -39,8 +39,8 @@ public class Queue {
             System.out.println("Riwayat Transaksi penuh");
             return;
         }
+        rear++;
         data[rear] = t;
-        rear = (rear + 1) % data.length;
         size++;
     }
     public void tampil() {
