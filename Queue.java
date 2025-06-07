@@ -43,4 +43,18 @@ public class Queue {
         rear = (rear + 1) % data.length;
         size++;
     }
+    public void tampil() {
+        System.out.println("-- RIWAYAT TRANSAKSI --");
+
+        if (IsEmpty()) {
+            System.out.println("Riwayat Transaksi kosong. ");
+            return;
+        }
+        System.out.println("Daftar Transaksi: ");
+        int idx = front;
+        for (int i = 0; i < size; i++) {
+            data[idx].tampil();
+            idx = (idx + 1) % data.length;
+        }
+    }
 }
