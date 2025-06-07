@@ -1,7 +1,5 @@
 import java.util.Scanner;
 
-
-
 public class Main {
     public static Pasien inputMahasiswa(Scanner sc) {
         System.out.print("Masukkan Nama Pasien: ");
