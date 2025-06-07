@@ -8,8 +8,6 @@ public class Main {
         String nik = sc.nextLine();
         System.out.print("Masukkan Keluhan: ");
         String keluhan = sc.nextLine();
-        System.out.print("Masukkan IPK: ");
-        sc.nextLine();
         return new Pasien(nik, nama, keluhan);
     }
     public static Dokter inputDokter(Scanner sc) {
@@ -17,7 +15,6 @@ public class Main {
         String idDokter = sc.nextLine();
         System.out.print("Masukkan Nama Dokter: ");
         String nama = sc.nextLine();
-        sc.nextLine();
         return new Dokter(idDokter, nama);
     }
 

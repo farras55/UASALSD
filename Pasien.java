@@ -8,6 +8,8 @@ public class Pasien {
             this.keluhan = keluhan;
         }
         public void tampilInformasi() {
-            System.out.println("NIK " + nik + ", Nama: " + nama + ", Keluhan: " + keluhan);
+            System.out.println("Nama Pasien: " + nama);
+            System.out.println("NIK: " + nik);
+            System.out.println("Keluhan: " + keluhan);
         }
     }
