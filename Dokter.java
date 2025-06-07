@@ -1,5 +1,3 @@
-package UASALSD;
-
 public class Dokter {
     String idDokter, nama;
 

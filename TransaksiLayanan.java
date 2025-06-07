@@ -1,5 +1,3 @@
-package UASALSD;
-
 public class TransaksiLayanan {
    Pasien pasien;
    Dokter dokter;

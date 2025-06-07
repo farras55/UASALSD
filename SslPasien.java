@@ -1,5 +1,3 @@
-import UASALSD.Pasien;
-
 public class SslPasien {
     NodePasien head, tail;
     int size;
@@ -23,6 +21,7 @@ public class SslPasien {
     public Pasien layaniDanAmbilPasien () {
         if (isEmpty()) {
             System.out.println("Antrian kosong.");
+            return null;
         } else {
             Pasien p = head.data;
             head = head.next;
@@ -33,7 +32,7 @@ public class SslPasien {
         }
     }
 
-    public Pasien tampilAntrian() {
+    public void tampilAntrian() {
         System.out.println();
         if (isEmpty()) {
             System.out.println("Antrian kosong.");
