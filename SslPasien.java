@@ -1,7 +1,3 @@
-import java.lang.classfile.components.ClassPrinter.Node;
-
-import UASALSD.Pasien;
-
 public class SslPasien {
     NodePasien head, tail;
     int size;
@@ -55,5 +51,13 @@ public class SslPasien {
             current = current.next;
         }
         return sisa;
+    }
+
+    public void lihatDepan() {
+        if (isEmpty()) {
+            System.out.println("Antrian kosong.");
+        } else {
+            head.data.tampilInformasi();
+        }
     }
 }
