@@ -1,8 +1,5 @@
 import java.util.Scanner;
 
-import UASALSD.Dokter;
-import UASALSD.TransaksiLayanan;
-
 public class Main {
     public static Pasien inputPasien(Scanner sc) {
         System.out.print("Masukkan Nama Pasien: ");
@@ -15,7 +12,7 @@ public class Main {
         sc.nextLine();
         return new Pasien(nik, nama, keluhan);
     }
-    public static inputDokter(Scanner sc) {
+    public static Dokter inputDokter(Scanner sc) {
         System.out.print("Masukkan ID Dokter: ");
         String idDokter = sc.nextLine();
         System.out.print("Masukkan Nama Dokter: ");
@@ -54,23 +51,23 @@ public class Main {
 
                 case 3:
                 Pasien a = antrian.layaniDanAmbilPasien();
-                if (p == null) {
+                if (a == null) {
                     System.out.println("Antrian Kosong");
                     break;
                 }
                 System.out.println("Pasien " + a.nama + " dipanggil");
                 Dokter d = inputDokter(sc);
                 System.out.print("Masukkan Durasi Layanan (jam): ");
-                int durasi = sc.nextInt(); sc.nextLine();
-                TransaksiLayanan T = new TransaksiLayanan(a.nama, d, durasi);
+                int durasilayanan = sc.nextInt();
+                sc.nextLine();
+                TransaksiLayanan t = new TransaksiLayanan(a, d, durasilayanan);
                 transaksi. tambah(null);
                 System.out.println("Pasien Telah Dilayani, Transaksi berhasil dicatat. ");
                 break;
 
-                
+
 
                 default:
-                    break;
             }
         } while (pilihan != 0);
     }
