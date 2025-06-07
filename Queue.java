@@ -17,7 +17,8 @@ public class Queue {
         max = n;
         data = new TransaksiLayanan[max];
         size = 0;
-        front = rear = 0;
+        front = 0;
+        rear = -1;
     }
     
     public boolean IsEmpty() {
@@ -35,7 +36,7 @@ public class Queue {
         }
     }
     public void tambah(TransaksiLayanan t) {
-        if (size == data.length) {
+        if (IsFull()) {
             System.out.println("Riwayat Transaksi penuh");
             return;
         }

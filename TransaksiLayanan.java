@@ -14,6 +14,7 @@ public class TransaksiLayanan {
        return biaya;
    }
    public void tampil()  {
+        hitungBiaya();
         System.out.println(pasien + " (" + durasiLayanan + " jam): Rp " + biaya);
    }
 }

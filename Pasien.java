@@ -7,6 +7,10 @@ public class Pasien {
             this.nik = nik;
             this.keluhan = keluhan;
         }
+        @Override
+        public String toString() {
+            return "nama: " + nama + ", NIK: " + nik + ", Keluhan: " + keluhan;
+        }
         public void tampilInformasi() {
             System.out.println("Nama Pasien: " + nama);
             System.out.println("NIK: " + nik);
