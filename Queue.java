@@ -5,6 +5,14 @@ public class Queue {
     int max;
     TransaksiLayanan[] data;
 
+    public void AntrianLayanan(int max) {
+        this.max = max;
+        this.data = new TransaksiLayanan[max];
+        this.front = 0;
+        this.rear = -1;
+        this.size = 0;
+    }
+
     public Queue(int n) {
         max = n;
         data = new TransaksiLayanan[max];
@@ -26,13 +34,13 @@ public class Queue {
             return false;
         }
     }
-
-    
-    public Pasien layaniPasien() {
-        if (IsEmpty()) {
-            System.out.println(" Antrian kosong");
-            return null;
+    public void tambah(TransaksiLayanan t) {
+        if (size == data.length) {
+            System.out.println("Riwayat Transaksi penuh");
+            return;
         }
-        Pasien 
+        data[rear] = t;
+        rear = (rear + 1) % data.length;
+        size++;
     }
 }
