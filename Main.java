@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+import UASALSD.Dokter;
 import UASALSD.TransaksiLayanan;
 
 public class Main {
@@ -20,7 +21,7 @@ public class Main {
         System.out.print("Masukkan Nama Dokter: ");
         String nama = sc.nextLine();
         sc.nextLine();
-        return new Dokter(String idDokter, String nama);
+        return new Dokter(idDokter, nama);
     }
 
     public static void main(String[] args) {
@@ -52,16 +53,16 @@ public class Main {
                 break;
 
                 case 3:
-                Pasien p = antrian.layaniDanAmbilPasien();
+                Pasien a = antrian.layaniDanAmbilPasien();
                 if (p == null) {
                     System.out.println("Antrian Kosong");
                     break;
                 }
-                System.out.println("Pasien " + p.nama + " dipanggil");
+                System.out.println("Pasien " + a.nama + " dipanggil");
                 Dokter d = inputDokter(sc);
                 System.out.print("Masukkan Durasi Layanan (jam): ");
                 int durasi = sc.nextInt(); sc.nextLine();
-                TransaksiLayanan T = new TransaksiLayanan(p.nama, d, durasi)
+                TransaksiLayanan T = new TransaksiLayanan(a.nama, d, durasi);
                 transaksi. tambah(null);
                 System.out.println("Pasien Telah Dilayani, Transaksi berhasil dicatat. ");
                 break;
