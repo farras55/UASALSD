@@ -8,7 +8,7 @@ public class Main {
         String nik = sc.nextLine();
         System.out.print("Masukkan Keluhan: ");
         String keluhan = sc.nextLine();
-        return new Pasien(nik, nama, keluhan);
+        return new Pasien(nama, nik, keluhan);
     }
     public static Dokter inputDokter(Scanner sc) {
         System.out.print("Masukkan ID Dokter: ");
