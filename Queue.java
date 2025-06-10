@@ -9,7 +9,7 @@ public class Queue {
         this.max = max;
         this.data = new TransaksiLayanan[max];
         this.front = 0;
-        this.rear = -1;
+        this.rear = 0;
         this.size = 0;
     }
 
@@ -28,6 +28,7 @@ public class Queue {
             return false;
         }
     }
+
     public boolean IsFull() {
         if (size == max) {
             return true;
@@ -35,15 +36,19 @@ public class Queue {
             return false;
         }
     }
+
     public void tambah(TransaksiLayanan t) {
         if (IsFull()) {
             System.out.println("Riwayat Transaksi penuh");
             return;
-        }
+        } else if (IsEmpty()) {
+            front = rear = 0;
+        } 
         rear++;
         data[rear] = t;
         size++;
     }
+
     public void tampil() {
         System.out.println("-- RIWAYAT TRANSAKSI --");
 
