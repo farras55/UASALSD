@@ -8,7 +8,7 @@ public class Queue {
     public void AntrianLayanan(int max) {
         this.max = max;
         this.data = new TransaksiLayanan[max];
-        this.front = 0;
+        this.front = -1;
         this.rear = -1;
         this.size = 0;
     }
