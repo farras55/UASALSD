@@ -43,7 +43,6 @@ public class Queue {
 
     public void tampil() {
         System.out.println("-- RIWAYAT TRANSAKSI --");
-
         if (IsEmpty()) {
             System.out.println("Riwayat Transaksi kosong. ");
             return;
@@ -52,7 +51,7 @@ public class Queue {
         int idx = front;
         for (int i = 0; i < size; i++) {
             data[idx].tampil();
-            idx = (idx + 1) % data.length;
+            idx = (idx + 1) % max;
         }
     }
 }
