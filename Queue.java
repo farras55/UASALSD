@@ -5,19 +5,11 @@ public class Queue {
     int max;
     TransaksiLayanan[] data;
 
-    public void AntrianLayanan(int max) {
-        this.max = max;
-        this.data = new TransaksiLayanan[max];
-        this.front = 0;
-        this.rear = 0;
-        this.size = 0;
-    }
-
     public Queue(int n) {
         max = n;
         data = new TransaksiLayanan[max];
         size = 0;
-        front = 0;
+        front = -1;
         rear = -1;
     }
     
