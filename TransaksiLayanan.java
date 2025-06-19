@@ -13,8 +13,11 @@ public class TransaksiLayanan {
        biaya = this.durasiLayanan * 50000;
        return biaya;
    }
-   public void tampil()  {
 
+   
+
+   public void tampil()  {
+        hitungBiaya();
         System.out.println(pasien.nama + " (" + durasiLayanan + " jam): Rp " + biaya);
    }
 }

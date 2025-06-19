@@ -8,7 +8,9 @@ public class Main {
         String nik = sc.nextLine();
         System.out.print("Masukkan Keluhan: ");
         String keluhan = sc.nextLine();
-        return new Pasien(nama, nik, keluhan);
+        System.out.print("Masukkan Umur: ");
+        int umur = sc.nextInt();
+        return new Pasien(nama, nik, keluhan, umur);
     }
     public static Dokter inputDokter(Scanner sc) {
         System.out.print("Masukkan ID Dokter: ");
@@ -31,6 +33,7 @@ public class Main {
             System.out.println("3. Layani Pasien");
             System.out.println("4. Cek Sisa Antrian Pasien");
             System.out.println("5. Lihat Riwayat Transaksi");
+            System.out.println("6. Cari berdasarkan Durasi Layanan");
             System.out.println("0. Keluar");
             System.out.print("Pilih Menu: ");
             pilihan = sc.nextInt();
@@ -70,6 +73,17 @@ public class Main {
                 case 5:
                 transaksi.tampil();
                 break;
+
+                case 6:
+                System.out.print("Masukkan durasi layanan yang dicari: ");
+                int durasi = sc.nextInt();
+                transaksi.cariPasienBerdasarkanDurasiLayanan(durasi);
+                break;
+
+                case 7:
+                transaksi.tampilPasienPembayaranTerbanyak();
+                break;
+                
 
                 case 0:
                 System.out.println("Program Selesai.");
